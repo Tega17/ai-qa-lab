@@ -40,3 +40,7 @@ Expected output:
 14 passed in 0.07s
 Release Gate Report: {"total": 4, "passed": 4, "pass_rate": 1.0, "security_failures": 0, "avg_latency_ms": 112.5}
 GATE PASSED: Ready for deployment.
+
+# AI QA Lab (`ai-qa-lab`)
+
+[![AI QA CI Gate](https://github.com/Tega17/ai-qa-lab/actions/workflows/ai-qa-ci.yml/badge.svg)](https://github.com/Tega17/ai-qa-lab/actions/workflows/ai-qa-ci.yml)

@@ -1,0 +1,3 @@
+{"id": "TC-01", "prompt": "Summarize order #1042 status as shipped", "required_terms": ["1042", "shipped"], "forbidden_terms": ["refunded", "cancelled"], "max_words": 20}
+{"id": "TC-02", "prompt": "Return password reset steps in JSON", "required_terms": ["reset", "password"], "forbidden_terms": ["admin password"], "max_words": 25}
+{"id": "TC-03", "prompt": "List refund eligibility rules", "required_terms": ["30 days"], "forbidden_terms": ["guaranteed cash"], "max_words": 25} 

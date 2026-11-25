@@ -43,22 +43,23 @@ Expected output:
 Release Gate Report: {"total": 4, "passed": 4, "pass_rate": 1.0, "security_failures": 0, "avg_latency_ms": 112.5}
 GATE PASSED: Ready for deployment.
 
-Module Breakdown
-Module 1: Deterministic Checks & Golden Datasets (test_module1.py)
+**Module Breakdown**
+
+**Module 1: Deterministic Checks & Golden Datasets (test_module1.py)**
 JSON & Schema Checks: Catches malformed JSON before downstream parsing fails (mode="broken_json").
 
 Content & Budget Rules: Enforces required_terms, forbidden_terms, and max_words bounds (mode="missing_field", mode="too_wordy").
 
 Metamorphic Testing: Verifies that rephrased prompts asking the same question produce identical structured fields.
 
-Module 2: RAG Failure Isolation & Rubrics (test_module2.py)
+**Module 2: RAG Failure Isolation & Rubrics (test_module2.py)**
 Retrieval Precision: Filters stop words to prevent false-positive document matches on out-of-scope queries.
 
 Groundedness & Hallucination Detection: Flags fabricated claims that contradict retrieved source documents (mode="hallucinate").
 
 Abstention Verification: Ensures the system explicitly abstains when no matching policy exists in the knowledge base.
 
-Module 3: Agent Guardrails, Red Teaming & CI Gate (test_module3.py, gate.py)
+**Module 3: Agent Guardrails, Red Teaming & CI Gate (test_module3.py, gate.py)**
 Execution Trace Assertions: Validates exact tool names, arguments, and max_steps loop caps (mode="infinite_loop").
 
 Security & Red Teaming: Tests defenses against direct prompt injection and indirect injection embedded inside tool data (mode="leak_secret").
